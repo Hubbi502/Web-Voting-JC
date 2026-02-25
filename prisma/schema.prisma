@@ -1,0 +1,48 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../app/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Admin {
+  id        String   @id @default(uuid())
+  username  String   @unique
+  password  String
+  createdAt DateTime @default(now())
+}
+
+model Candidate {
+  id            String   @id @default(uuid())
+  name          String
+  className     String
+  visi          String   @db.Text
+  misi          String   @db.Text
+  programKerja  String   @db.Text
+  photoUrl      String
+  photoPublicId String
+  order         Int      @default(0)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  votes         Vote[]
+}
+
+model VoteToken {
+  id        String    @id @default(uuid())
+  token     String    @unique
+  isUsed    Boolean   @default(false)
+  usedAt    DateTime?
+  createdAt DateTime  @default(now())
+  vote      Vote?
+}
+
+model Vote {
+  id          String    @id @default(uuid())
+  candidateId String
+  tokenId     String    @unique
+  candidate   Candidate @relation(fields: [candidateId], references: [id], onDelete: Cascade)
+  voteToken   VoteToken @relation(fields: [tokenId], references: [id], onDelete: Cascade)
+  createdAt   DateTime  @default(now())
+}
