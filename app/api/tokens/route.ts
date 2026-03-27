@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { prisma } from "@/app/lib/prisma";
 import { requireAdmin } from "@/app/lib/auth";
 import { generateTokens } from "@/app/lib/token";
+import crypto from "crypto";
 
 // GET - List all tokens (admin only)
 export async function GET() {
@@ -43,31 +44,28 @@ export async function POST(request: Request) {
 
         const { count } = await request.json();
         const tokenCount = Math.min(Math.max(parseInt(count) || 1, 1), 100);
-
         const tokenValues = generateTokens(tokenCount);
 
-        const created = await prisma.voteToken.createMany({
-            data: tokenValues.map((token) => ({ token })),
-        });
-
-        // Fetch the created tokens to return
-        const tokens = await prisma.voteToken.findMany({
-            where: {
-                token: { in: tokenValues },
-            },
-            orderBy: { createdAt: "desc" },
-        });
+        const tokens = await prisma.$transaction(
+            tokenValues.map((token) => prisma.voteToken.create({ 
+                data: { 
+                    token,
+                    phoneNumber: null
+                } 
+            }))
+        );
 
         return NextResponse.json(
             {
-                message: `${created.count} token berhasil dibuat`,
+                message: `${tokens.length} token berhasil dibuat`,
                 tokens,
             },
             { status: 201 }
         );
-    } catch {
+    } catch (error) {
+        console.error("Error creating tokens:", error);
         return NextResponse.json(
-            { error: "Gagal membuat token" },
+            { error: "Gagal membuat token", details: error instanceof Error ? error.message : String(error) },
             { status: 500 }
         );
     }

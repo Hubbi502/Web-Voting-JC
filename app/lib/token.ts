@@ -1,13 +1,13 @@
-import { v4 as uuidv4 } from "uuid";
+import crypto from "crypto";
 
 export function generateToken(): string {
     // Generate 8-character alphanumeric token
     const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"; // Removed ambiguous chars (0, O, I, 1)
     let token = "";
-    const randomBytes = uuidv4().replace(/-/g, "");
+    const randomBytes = crypto.randomBytes(16);
 
     for (let i = 0; i < 8; i++) {
-        const index = parseInt(randomBytes.substring(i * 2, i * 2 + 2), 16) % chars.length;
+        const index = randomBytes[i] % chars.length;
         token += chars[index];
     }
 

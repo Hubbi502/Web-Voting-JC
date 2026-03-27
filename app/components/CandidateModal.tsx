@@ -22,15 +22,15 @@ export default function CandidateModal({ candidate, onClose }: CandidateModalPro
         <div className="modal-overlay" onClick={onClose}>
             <div className="modal-content" onClick={(e) => e.stopPropagation()}>
                 {/* Header with image */}
-                <div className="relative h-64 sm:h-80">
+                <div className="relative h-48 sm:h-80">
                     <Image
                         src={candidate.photoUrl}
                         alt={candidate.name}
                         fill
-                        className="object-cover rounded-t-xl"
-                        sizes="700px"
+                        className="object-cover sm:rounded-t-xl"
+                        sizes="(max-width: 640px) 100vw, 700px"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-jp-navy via-jp-navy/50 to-transparent rounded-t-xl" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-jp-navy via-jp-navy/50 to-transparent sm:rounded-t-xl" />
 
                     {/* Close button */}
                     <button
@@ -41,8 +41,8 @@ export default function CandidateModal({ candidate, onClose }: CandidateModalPro
                     </button>
 
                     {/* Name overlay */}
-                    <div className="absolute bottom-4 left-6 right-6">
-                        <h2 className="font-serif text-3xl font-bold text-jp-cream drop-shadow-lg">
+                    <div className="absolute bottom-4 left-4 right-4 sm:left-6 sm:right-6">
+                        <h2 className="font-serif text-2xl sm:text-3xl font-bold text-jp-cream drop-shadow-lg">
                             {candidate.name}
                         </h2>
                         <p className="text-jp-pink font-medium mt-1">{candidate.className}</p>
@@ -50,14 +50,14 @@ export default function CandidateModal({ candidate, onClose }: CandidateModalPro
                 </div>
 
                 {/* Content */}
-                <div className="p-6 space-y-6">
+                <div className="p-4 sm:p-6 space-y-5 sm:space-y-6">
                     {/* Visi */}
                     <div>
-                        <div className="flex items-center gap-2 mb-3">
-                            <span className="text-xl">🎯</span>
-                            <h3 className="font-serif text-lg font-bold text-jp-gold tracking-wider">VISI</h3>
+                        <div className="flex items-center gap-2 mb-2 sm:mb-3">
+                            <span className="text-lg sm:text-xl">🎯</span>
+                            <h3 className="font-serif text-base sm:text-lg font-bold text-jp-gold tracking-wider">VISI</h3>
                         </div>
-                        <p className="text-jp-cream/80 leading-relaxed pl-8 whitespace-pre-line">
+                        <p className="text-jp-cream/80 text-sm leading-relaxed pl-4 sm:pl-8 whitespace-pre-line">
                             {candidate.visi}
                         </p>
                     </div>
@@ -66,11 +66,11 @@ export default function CandidateModal({ candidate, onClose }: CandidateModalPro
 
                     {/* Misi */}
                     <div>
-                        <div className="flex items-center gap-2 mb-3">
-                            <span className="text-xl">📋</span>
-                            <h3 className="font-serif text-lg font-bold text-jp-gold tracking-wider">MISI</h3>
+                        <div className="flex items-center gap-2 mb-2 sm:mb-3">
+                            <span className="text-lg sm:text-xl">📋</span>
+                            <h3 className="font-serif text-base sm:text-lg font-bold text-jp-gold tracking-wider">MISI</h3>
                         </div>
-                        <p className="text-jp-cream/80 leading-relaxed pl-8 whitespace-pre-line">
+                        <p className="text-jp-cream/80 text-sm leading-relaxed pl-4 sm:pl-8 whitespace-pre-line">
                             {candidate.misi}
                         </p>
                     </div>
@@ -79,18 +79,18 @@ export default function CandidateModal({ candidate, onClose }: CandidateModalPro
 
                     {/* Program Kerja */}
                     <div>
-                        <div className="flex items-center gap-2 mb-3">
-                            <span className="text-xl">🏯</span>
-                            <h3 className="font-serif text-lg font-bold text-jp-gold tracking-wider">PROGRAM KERJA</h3>
+                        <div className="flex items-center gap-2 mb-2 sm:mb-3">
+                            <span className="text-lg sm:text-xl">🏯</span>
+                            <h3 className="font-serif text-base sm:text-lg font-bold text-jp-gold tracking-wider">PROGRAM KERJA</h3>
                         </div>
-                        <p className="text-jp-cream/80 leading-relaxed pl-8 whitespace-pre-line">
+                        <p className="text-jp-cream/80 text-sm leading-relaxed pl-4 sm:pl-8 whitespace-pre-line">
                             {candidate.programKerja}
                         </p>
                     </div>
                 </div>
 
-                {/* Footer */}
-                <div className="p-6 pt-0">
+                {/* Footer - larger button for thumb reach on mobile */}
+                <div className="p-4 sm:p-6 pt-0 safe-bottom">
                     <button
                         onClick={onClose}
                         className="btn-secondary w-full text-center"

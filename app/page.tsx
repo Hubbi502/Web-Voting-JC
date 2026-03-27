@@ -37,24 +37,24 @@ export default function Home() {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative pt-24 pb-16 px-4 overflow-hidden">
+      <section className="relative pt-20 sm:pt-24 pb-10 sm:pb-16 px-4 overflow-hidden">
         {/* Background decorations removed */}
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <div className="inline-block mb-4">
-            <span className="text-5xl sm:text-6xl">⛩️</span>
+          <div className="inline-block mb-3 sm:mb-4">
+            <span className="text-4xl sm:text-6xl">⛩️</span>
           </div>
-          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-jp-cream mb-4 tracking-wide">
+          <h1 className="font-serif text-2xl sm:text-5xl lg:text-6xl font-bold text-jp-cream mb-3 sm:mb-4 tracking-wide">
             Pemilihan Ketua
           </h1>
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="h-px w-16 bg-gradient-to-r from-transparent to-jp-gold"></div>
-            <span className="font-serif text-jp-gold text-lg tracking-[0.3em]">日本クラブ</span>
-            <div className="h-px w-16 bg-gradient-to-l from-transparent to-jp-gold"></div>
+          <div className="flex items-center justify-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+            <div className="h-px w-10 sm:w-16 bg-gradient-to-r from-transparent to-jp-gold"></div>
+            <span className="font-serif text-jp-gold text-sm sm:text-lg tracking-[0.2em] sm:tracking-[0.3em]">日本クラブ</span>
+            <div className="h-px w-10 sm:w-16 bg-gradient-to-l from-transparent to-jp-gold"></div>
           </div>
-          <h2 className="font-serif text-2xl sm:text-3xl text-jp-pink font-semibold mb-2">
+          <h2 className="font-serif text-xl sm:text-3xl text-jp-pink font-semibold mb-1 sm:mb-2">
             Japanese Club
           </h2>
-          <p className="text-jp-cream/50 text-lg">
+          <p className="text-jp-cream/50 text-base sm:text-lg">
             Periode 2026 / 2027
           </p>
 
@@ -71,8 +71,8 @@ export default function Home() {
 
       {/* Candidates Grid */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 relative z-10">
-        <div className="text-center mb-12">
-          <h2 className="font-serif text-2xl sm:text-3xl font-bold text-jp-cream mb-2">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="font-serif text-xl sm:text-3xl font-bold text-jp-cream mb-2">
             Kandidat Ketua
           </h2>
           <div className="flex items-center justify-center gap-3">

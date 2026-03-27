@@ -30,9 +30,8 @@ export default function VotePage() {
                 return;
             }
 
-            // Store token in sessionStorage and redirect to candidate selection
-            sessionStorage.setItem("voteToken", data.token);
-            router.push("/vote/select");
+            // Redirect to candidate selection with token in URL query parameter
+            router.push(`/vote/select?token=${encodeURIComponent(data.token)}`);
         } catch {
             setError("Terjadi kesalahan. Coba lagi.");
         } finally {
@@ -47,19 +46,19 @@ export default function VotePage() {
 
             <div className="w-full max-w-md relative z-10">
                 {/* Header */}
-                <div className="text-center mb-8">
-                    <span className="text-5xl block mb-3">🗳️</span>
-                    <h1 className="font-serif text-3xl font-bold text-jp-cream tracking-wider">
+                <div className="text-center mb-6 sm:mb-8">
+                    <span className="text-4xl sm:text-5xl block mb-3">🗳️</span>
+                    <h1 className="font-serif text-2xl sm:text-3xl font-bold text-jp-cream tracking-wider">
                         Sesi Voting
                     </h1>
                     <p className="text-jp-cream/40 text-sm mt-2">投票セッション</p>
-                    <p className="text-jp-cream/50 text-sm mt-4">
+                    <p className="text-jp-cream/50 text-sm mt-3 sm:mt-4 px-2">
                         Masukkan token voting yang telah diberikan untuk memulai proses pemilihan
                     </p>
                 </div>
 
                 {/* Token Input */}
-                <div className="glass-card rounded-xl p-8">
+                <div className="glass-card rounded-xl p-5 sm:p-8">
                     <form onSubmit={handleSubmit} className="space-y-5">
                         <div>
                             <label className="block text-jp-cream/60 text-sm font-medium mb-2">
@@ -69,7 +68,7 @@ export default function VotePage() {
                                 type="text"
                                 value={token}
                                 onChange={(e) => setToken(e.target.value.toUpperCase())}
-                                className="input-jp text-center text-2xl tracking-[0.5em] font-mono uppercase"
+                                className="input-jp text-center text-xl sm:text-2xl tracking-[0.2em] sm:tracking-[0.5em] font-mono uppercase"
                                 placeholder="XXXXXXXX"
                                 maxLength={8}
                                 required

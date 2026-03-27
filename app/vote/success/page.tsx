@@ -20,13 +20,13 @@ export default function VoteSuccessPage() {
 
             <div className="w-full max-w-md text-center relative z-10">
                 {/* Success Animation */}
-                <div className="mb-6">
-                    <div className="w-24 h-24 rounded-full bg-green-500/20 flex items-center justify-center mx-auto mb-4 animate-bounce">
-                        <span className="text-5xl">✅</span>
+                <div className="mb-4 sm:mb-6">
+                    <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-green-500/20 flex items-center justify-center mx-auto mb-4 animate-bounce">
+                        <span className="text-4xl sm:text-5xl">✅</span>
                     </div>
                 </div>
 
-                <h1 className="font-serif text-3xl sm:text-4xl font-bold text-jp-cream tracking-wider mb-3">
+                <h1 className="font-serif text-2xl sm:text-4xl font-bold text-jp-cream tracking-wider mb-3">
                     Voting Berhasil!
                 </h1>
                 <p className="text-jp-cream/40 text-sm mb-6">投票成功</p>
@@ -38,7 +38,7 @@ export default function VoteSuccessPage() {
                     </div>
                 )}
 
-                <div className="glass-card rounded-xl p-6 mb-8">
+                <div className="glass-card rounded-xl p-4 sm:p-6 mb-6 sm:mb-8">
                     <p className="text-jp-cream/60 text-sm leading-relaxed">
                         Terima kasih telah berpartisipasi dalam pemilihan Ketua Japanese Club 2026/2027.
                         Suara Anda telah tercatat dan tidak dapat diubah.

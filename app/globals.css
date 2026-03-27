@@ -50,13 +50,16 @@ body {
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--jp-navy);
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--jp-red);
   border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: var(--jp-red-light);
 }
@@ -67,18 +70,22 @@ body {
     transform: translateY(-100px) translateX(0) rotate(0deg);
     opacity: 1;
   }
+
   25% {
     transform: translateY(25vh) translateX(30px) rotate(90deg);
     opacity: 0.8;
   }
+
   50% {
     transform: translateY(50vh) translateX(-20px) rotate(180deg);
     opacity: 0.6;
   }
+
   75% {
     transform: translateY(75vh) translateX(40px) rotate(270deg);
     opacity: 0.4;
   }
+
   100% {
     transform: translateY(100vh) translateX(-10px) rotate(360deg);
     opacity: 0;
@@ -90,14 +97,17 @@ body {
     transform: translateY(-100px) translateX(0) rotate(45deg);
     opacity: 0.9;
   }
+
   30% {
     transform: translateY(30vh) translateX(-40px) rotate(135deg);
     opacity: 0.7;
   }
+
   60% {
     transform: translateY(60vh) translateX(25px) rotate(225deg);
     opacity: 0.5;
   }
+
   100% {
     transform: translateY(100vh) translateX(15px) rotate(405deg);
     opacity: 0;
@@ -114,21 +124,80 @@ body {
   opacity: 0;
 }
 
-.sakura-petal:nth-child(1) { left: 5%; animation: sakuraFall 8s 0s infinite; }
-.sakura-petal:nth-child(2) { left: 15%; animation: sakuraFall2 10s 1s infinite; }
-.sakura-petal:nth-child(3) { left: 25%; animation: sakuraFall 12s 2s infinite; }
-.sakura-petal:nth-child(4) { left: 35%; animation: sakuraFall2 9s 0.5s infinite; }
-.sakura-petal:nth-child(5) { left: 45%; animation: sakuraFall 11s 3s infinite; }
-.sakura-petal:nth-child(6) { left: 55%; animation: sakuraFall2 8s 1.5s infinite; }
-.sakura-petal:nth-child(7) { left: 65%; animation: sakuraFall 10s 2.5s infinite; }
-.sakura-petal:nth-child(8) { left: 75%; animation: sakuraFall2 13s 0.8s infinite; }
-.sakura-petal:nth-child(9) { left: 85%; animation: sakuraFall 9s 1.2s infinite; }
-.sakura-petal:nth-child(10) { left: 95%; animation: sakuraFall2 11s 3.5s infinite; }
-.sakura-petal:nth-child(11) { left: 10%; animation: sakuraFall 14s 4s infinite; }
-.sakura-petal:nth-child(12) { left: 30%; animation: sakuraFall2 7s 2s infinite; }
-.sakura-petal:nth-child(13) { left: 50%; animation: sakuraFall 10s 0.3s infinite; }
-.sakura-petal:nth-child(14) { left: 70%; animation: sakuraFall2 12s 1.8s infinite; }
-.sakura-petal:nth-child(15) { left: 90%; animation: sakuraFall 8s 3.2s infinite; }
+.sakura-petal:nth-child(1) {
+  left: 5%;
+  animation: sakuraFall 8s 0s infinite;
+}
+
+.sakura-petal:nth-child(2) {
+  left: 15%;
+  animation: sakuraFall2 10s 1s infinite;
+}
+
+.sakura-petal:nth-child(3) {
+  left: 25%;
+  animation: sakuraFall 12s 2s infinite;
+}
+
+.sakura-petal:nth-child(4) {
+  left: 35%;
+  animation: sakuraFall2 9s 0.5s infinite;
+}
+
+.sakura-petal:nth-child(5) {
+  left: 45%;
+  animation: sakuraFall 11s 3s infinite;
+}
+
+.sakura-petal:nth-child(6) {
+  left: 55%;
+  animation: sakuraFall2 8s 1.5s infinite;
+}
+
+.sakura-petal:nth-child(7) {
+  left: 65%;
+  animation: sakuraFall 10s 2.5s infinite;
+}
+
+.sakura-petal:nth-child(8) {
+  left: 75%;
+  animation: sakuraFall2 13s 0.8s infinite;
+}
+
+.sakura-petal:nth-child(9) {
+  left: 85%;
+  animation: sakuraFall 9s 1.2s infinite;
+}
+
+.sakura-petal:nth-child(10) {
+  left: 95%;
+  animation: sakuraFall2 11s 3.5s infinite;
+}
+
+.sakura-petal:nth-child(11) {
+  left: 10%;
+  animation: sakuraFall 14s 4s infinite;
+}
+
+.sakura-petal:nth-child(12) {
+  left: 30%;
+  animation: sakuraFall2 7s 2s infinite;
+}
+
+.sakura-petal:nth-child(13) {
+  left: 50%;
+  animation: sakuraFall 10s 0.3s infinite;
+}
+
+.sakura-petal:nth-child(14) {
+  left: 70%;
+  animation: sakuraFall2 12s 1.8s infinite;
+}
+
+.sakura-petal:nth-child(15) {
+  left: 90%;
+  animation: sakuraFall 8s 3.2s infinite;
+}
 
 /* Wave pattern at bottom */
 .wave-pattern {
@@ -163,11 +232,13 @@ body {
   border: none;
   cursor: pointer;
 }
+
 .btn-primary:hover {
   background: linear-gradient(135deg, var(--jp-red-light), #D92550);
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(139, 0, 0, 0.4);
 }
+
 .btn-primary:disabled {
   opacity: 0.5;
   cursor: not-allowed;
@@ -184,6 +255,7 @@ body {
   border: 1px solid var(--jp-pink);
   cursor: pointer;
 }
+
 .btn-secondary:hover {
   background: rgba(255, 183, 197, 0.1);
   transform: translateY(-2px);
@@ -200,6 +272,7 @@ body {
   border: none;
   cursor: pointer;
 }
+
 .btn-gold:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(212, 165, 116, 0.4);
@@ -211,6 +284,7 @@ body {
   overflow: hidden;
   border-radius: 0.75rem 0.75rem 0 0;
 }
+
 .candidate-img-wrapper::after {
   content: '';
   position: absolute;
@@ -247,19 +321,32 @@ body {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideUp {
-  from { opacity: 0; transform: translateY(40px) scale(0.95); }
-  to { opacity: 1; transform: translateY(0) scale(1); }
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 /* Torii gate decoration */
 .torii-decoration {
   position: relative;
 }
+
 .torii-decoration::before {
   content: '⛩️';
   position: absolute;
@@ -278,11 +365,13 @@ body {
   transition: all 0.3s ease;
   width: 100%;
 }
+
 .input-jp:focus {
   outline: none;
   border-color: var(--jp-pink);
   box-shadow: 0 0 0 3px rgba(255, 183, 197, 0.1);
 }
+
 .input-jp::placeholder {
   color: rgba(255, 248, 231, 0.3);
 }
@@ -299,6 +388,7 @@ body {
   min-height: 100px;
   resize: vertical;
 }
+
 .textarea-jp:focus {
   outline: none;
   border-color: var(--jp-pink);
@@ -311,6 +401,7 @@ body {
   border-collapse: separate;
   border-spacing: 0;
 }
+
 .admin-table th {
   background: rgba(139, 0, 0, 0.3);
   padding: 0.75rem 1rem;
@@ -319,19 +410,27 @@ body {
   color: var(--jp-pink);
   border-bottom: 2px solid rgba(255, 183, 197, 0.2);
 }
+
 .admin-table td {
   padding: 0.75rem 1rem;
   border-bottom: 1px solid rgba(255, 183, 197, 0.08);
 }
+
 .admin-table tr:hover td {
   background: rgba(255, 183, 197, 0.05);
 }
 
 /* Shimmer loading */
 @keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
 }
+
 .shimmer {
   background: linear-gradient(90deg, rgba(26, 26, 46, 0.4) 25%, rgba(58, 58, 94, 0.4) 50%, rgba(26, 26, 46, 0.4) 75%);
   background-size: 200% 100%;
@@ -348,6 +447,7 @@ body {
   font-size: 0.75rem;
   font-weight: 600;
 }
+
 .badge-available {
   background: rgba(0, 139, 69, 0.3);
   color: #51cf66;
@@ -355,4 +455,113 @@ body {
   border-radius: 999px;
   font-size: 0.75rem;
   font-weight: 600;
+}
+
+/* ===== MOBILE RESPONSIVE ENHANCEMENTS ===== */
+
+/* Modal: full-screen sheet on mobile */
+@media (max-width: 640px) {
+  .modal-content {
+    max-width: 100%;
+    width: 100%;
+    max-height: 100vh;
+    height: 100%;
+    border-radius: 0;
+    animation: slideUpMobile 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .modal-overlay {
+    align-items: flex-end;
+  }
+
+  /* Disable hover lift on mobile (causes visual jank on tap) */
+  .glass-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .glass-card:active {
+    transform: scale(0.98);
+    transition: transform 0.1s ease;
+  }
+}
+
+@keyframes slideUpMobile {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Increase touch target for buttons on mobile */
+@media (max-width: 640px) {
+
+  .btn-primary,
+  .btn-secondary,
+  .btn-gold {
+    min-height: 48px;
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* Safe area bottom padding for fixed bars (notch / gesture bar) */
+.safe-bottom {
+  padding-bottom: max(1rem, env(safe-area-inset-bottom));
+}
+
+/* Mobile menu animation */
+.mobile-menu-enter {
+  animation: menuSlideDown 0.25s ease-out;
+}
+
+@keyframes menuSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile menu backdrop overlay */
+.mobile-menu-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 35;
+  animation: fadeIn 0.2s ease;
+}
+
+/* Horizontal candidate card on mobile */
+.candidate-card-mobile {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.candidate-card-mobile .candidate-img-mobile {
+  position: relative;
+  width: 120px;
+  min-height: 140px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 0.75rem 0 0 0.75rem;
+}
+
+.candidate-card-mobile .candidate-info-mobile {
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
 }
