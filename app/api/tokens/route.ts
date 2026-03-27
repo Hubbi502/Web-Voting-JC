@@ -49,8 +49,7 @@ export async function POST(request: Request) {
         const tokens = await prisma.$transaction(
             tokenValues.map((token) => prisma.voteToken.create({ 
                 data: { 
-                    token,
-                    phoneNumber: null
+                    token
                 } 
             }))
         );
